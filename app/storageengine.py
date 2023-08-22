@@ -120,4 +120,9 @@ class QueryEngine:
   def SaveDataInFile(self):
     with open(self.SnapshotFilePath, "w+") as outfile:
       json.dump(self.Data, outfile)
-         
+  def SetSnapshotFilePath(self, path):
+    self.SnapshotFilePath = path        
+  def LoadDataInFile(self):
+    with open(self.SnapshotFilePath, "r") as infile:
+      self.Data = json.load(infile)
+

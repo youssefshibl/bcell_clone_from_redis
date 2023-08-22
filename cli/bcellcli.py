@@ -16,5 +16,3 @@ while True:
     decoded_data = data.decode('utf-8')
     deserialized_data = RES_PATTERN.match(decoded_data).group(1)
     print(deserialized_data)
-s.close()
-print('Received', repr(data))

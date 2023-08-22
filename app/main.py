@@ -9,7 +9,10 @@ SIMPLE_STR = re.compile(r"^\+(.*)[\r\n|\n]$")
 # SIMPLE_STR = re.compile(r"^\+(.*)\n")
 BULK_STR = re.compile(r"^\$\d+\r\n(.*)\r\n$")
 
+SnapshotFilePath = "./data/data.json"
 QueryEngineInstance = QueryEngine("localhost", 6379)
+QueryEngineInstance.SetSnapshotFilePath(SnapshotFilePath)
+QueryEngineInstance.LoadDataInFile()
 
 
 def serialize_simple_string(s: str) -> str:
