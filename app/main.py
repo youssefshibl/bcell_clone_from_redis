@@ -2,7 +2,7 @@
 import socket
 import re
 import threading
-from storageengine import *
+from app.storageengine import QueryEngine
 
 HAS_CR_LF = re.compile(r"[\r\n]+")
 SIMPLE_STR = re.compile(r"^\+(.*)[\r\n|\n]$")
